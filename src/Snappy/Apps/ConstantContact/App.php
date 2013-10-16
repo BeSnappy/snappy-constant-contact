@@ -17,7 +17,7 @@ class App extends BaseApp {
 	 *
 	 * @var string
 	 */
-	public $description = 'Add new contacts to your ConstantContact mailing list.';
+	public $description = 'Add new contacts to your Constant Contact mailing list.';
 
 	/**
 	 * Any notes about this application
@@ -52,7 +52,10 @@ class App extends BaseApp {
 	 *
 	 * @var array
 	 */
-	public $settings = array();
+	public $settings = array(
+		array('name' => 'token', 'type' => 'text', 'help' => 'Enter your Constant Contact API Token'),
+		array('name' => 'list', 'type' => 'text', 'help' => 'Enter the mailing list that will receive the contacts'),
+	);
 
 	/**
 	 * Handle the creation of a new contact.
