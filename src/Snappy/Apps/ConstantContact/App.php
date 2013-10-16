@@ -53,7 +53,8 @@ class App extends BaseApp implements ContactCreatedHandler {
 	 * @var array
 	 */
 	public $settings = array(
-		array('name' => 'token', 'type' => 'text', 'help' => 'Enter your Constant Contact API Token'),
+		array('name' => 'key', 'type' => 'text', 'help' => 'Enter your Constant Contact API Key'),
+		array('name' => 'token', 'type' => 'text', 'help' => 'Enter your Constant Contact Access Token'),
 		array('name' => 'list', 'type' => 'text', 'help' => 'Enter the mailing list that will receive the contacts'),
 	);
 
@@ -66,7 +67,7 @@ class App extends BaseApp implements ContactCreatedHandler {
 	 */
 	public function handleContactCreated(array $ticket, array $contact)
 	{
-		$cc = new \Ctct\ConstantContact($this->config['token']);
+		$cc = new \Ctct\ConstantContact($this->config['key']);
 
 		try
 		{
