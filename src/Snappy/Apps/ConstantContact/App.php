@@ -75,6 +75,25 @@ class App extends BaseApp implements ContactCreatedHandler {
 
 			if (empty($response->results))
 			{
+				// Pull out the list ID if we got a alphanumeric name...
+				if ( ! is_numeric($this->config['list']))
+				{
+					$lists = $cc->getLists($this->config['token']);
+					$listName = $this->config['list'];
+					$list = array_first($lists, function($key, $value) use ($listName)
+					{
+						return $value->name == $listName;
+					});
+					if ($list)
+					{
+						$this->config['list'] = $list->id;
+					}
+					else
+					{
+						return;
+					}
+				}
+
 				$constantContact = new \Ctct\Components\Contacts\Contact;
 
 				$constantContact->addEmail($contact['value']);
