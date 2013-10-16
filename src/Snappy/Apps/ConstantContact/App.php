@@ -24,7 +24,7 @@ class App extends BaseApp implements ContactCreatedHandler {
 	 *
 	 * @var string
 	 */
-	public $notes = 'Constant Contact';
+	public $notes = '';
 
 	/**
 	 * The application's icon filename.
