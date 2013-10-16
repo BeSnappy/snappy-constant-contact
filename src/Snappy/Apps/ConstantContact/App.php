@@ -75,18 +75,18 @@ class App extends BaseApp implements ContactCreatedHandler {
 
 			if (empty($response->results))
 			{
-				$contact = new \Ctct\Components\Contacts\Contact;
+				$constantContact = new \Ctct\Components\Contacts\Contact;
 
-				$contact->addEmail($contact['value']);
-				$contact->addList($this->config['list']);
+				$constantContact->addEmail($contact['value']);
+				$constantContact->addList($this->config['list']);
 
 				if (isset($contact['first_name']) and isset($contact['last_name']))
 				{
-					$contact->first_name = $contact['first_name'];
-					$contact->last_name = $contact['last_name'];
+					$constantContact->first_name = $contact['first_name'];
+					$constantContact->last_name = $contact['last_name'];
 				}
 
-				$cc->addContact($this->config['token'], $contact, false);
+				$cc->addContact($this->config['token'], $constantContact, false);
 			}
 		}
 		catch (\Exception $e)
