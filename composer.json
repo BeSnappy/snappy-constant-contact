@@ -1,0 +1,22 @@
+{
+    "name": "snappy/constant-contact",
+    "description": "Snappy application to add new contacts to ConstantContact.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "UserScape, Inc.",
+            "email": "it@userscape.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "constantcontact/constantcontact": "1.*",
+        "snappy/app-support": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "minimum-stability": "dev"
+}
