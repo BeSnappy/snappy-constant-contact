@@ -3,7 +3,7 @@
 use Snappy\Apps\App as BaseApp;
 use Snappy\Apps\ContactCreatedHandler;
 
-class App extends BaseApp {
+class App extends BaseApp implements ContactCreatedHandler {
 
 	/**
 	 * The name of the application.
