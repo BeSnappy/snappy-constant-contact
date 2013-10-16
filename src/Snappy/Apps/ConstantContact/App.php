@@ -10,7 +10,7 @@ class App extends BaseApp implements ContactCreatedHandler {
 	 *
 	 * @var string
 	 */
-	public $name = 'ConstantContact';
+	public $name = 'Constant Contact';
 
 	/**
 	 * The application description.
