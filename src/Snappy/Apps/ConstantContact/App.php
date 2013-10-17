@@ -17,7 +17,7 @@ class App extends BaseApp implements ContactCreatedHandler {
 	 *
 	 * @var string
 	 */
-	public $description = 'Add new contacts to your Constant Contact mailing list.';
+	public $description = 'Automatically add new contacts to your Constant Contact mailing list.';
 
 	/**
 	 * Any notes about this application
