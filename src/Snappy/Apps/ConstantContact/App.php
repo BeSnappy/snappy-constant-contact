@@ -53,8 +53,8 @@ class App extends BaseApp implements ContactCreatedHandler {
 	 * @var array
 	 */
 	public $settings = array(
-		array('name' => 'key', 'type' => 'text', 'help' => 'Enter your Constant Contact API Key'),
-		array('name' => 'token', 'type' => 'text', 'help' => 'Enter your Constant Contact Access Token'),
+		array('name' => 'key', 'type' => 'text', 'help' => 'Enter your Constant Contact API Key', 'validate' => 'required'),
+		array('name' => 'token', 'type' => 'text', 'help' => 'Enter your Constant Contact Access Token', 'validate' => 'required'),
 		array('name' => 'list', 'type' => 'text', 'help' => 'Enter the mailing list that will receive the contacts'),
 	);
 
