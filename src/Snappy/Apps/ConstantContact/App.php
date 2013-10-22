@@ -34,6 +34,13 @@ class App extends BaseApp implements ContactCreatedHandler {
 	public $icon = 'constant_contact.png';
 
 	/**
+	 * The application service's main website.
+	 *
+	 * @var string
+	 */
+	public $website = 'https://constantcontact.com';
+
+	/**
 	 * The application author name.
 	 *
 	 * @var string
